@@ -12,7 +12,7 @@ var express = require('express'),
 	app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 
 app.post('/deploy/', function (req, res) {
  	var spawn = require('child_process').spawn,
