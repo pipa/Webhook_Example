@@ -14,6 +14,10 @@ var express = require('express'),
 // all environments
 app.set('port', process.env.PORT || 8080);
 
+app.get('/', function (req, res, next) {
+	res.send('Hello World!')
+})
+
 app.post('/deploy/', function (req, res) {
  	var spawn = require('child_process').spawn,
         deploy = spawn('sh', [ './deploy.sh' ]);
